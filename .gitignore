@@ -4,3 +4,5 @@
 !*.gitignore
 !*.txt
 !*.cs
+*/bin*
+*/obj*
