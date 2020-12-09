@@ -1,0 +1,148 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace _4D1P
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\4D1P\input.txt";
+            List<string> inputList = File.ReadAllLines(inputPath).ToList();
+            int passportNumber = 0;
+            int validPassport = 0;
+            int invalidPassport = 0;
+            int validCheatedPassport = 0;
+            int itterator = 1;// indexer for how far into the input list we are starting at 1, because inputList.Lenght starts at 1
+            string[] currentKey;
+            string[] currentKeyChain;
+            //bool valid = true;
+            Boolean byr = false;
+            Boolean iyr = false;
+            Boolean eyr = false;
+            Boolean hgt = false;
+            Boolean hcl = false;
+            Boolean ecl = false;
+            Boolean pid = false;
+            //Boolean cid = false;
+
+
+            foreach (string currentLine in inputList)
+            {
+
+                if (currentLine == "" || itterator == inputList.Count)
+                {
+                    passportNumber += 1;
+                    if (byr && iyr && eyr && hgt && hcl && ecl && pid)
+                    {
+                        validPassport += 1;
+                        Console.WriteLine("passport number: {0}, is valid", passportNumber);
+                        byr = false;
+                        iyr = false;
+                        eyr = false;
+                        hgt = false;
+                        hcl = false;
+                        ecl = false;
+                        pid = false;
+                        //cid = false;
+                    }
+                    else
+                    {
+                        invalidPassport += 1;
+                        Console.WriteLine("passport number: {0}, is invalid", passportNumber);
+                        byr = false;
+                        iyr = false;
+                        eyr = false;
+                        hgt = false;
+                        hcl = false;
+                        ecl = false;
+                        pid = false;
+                        //cid = false;
+                    }
+
+
+                }
+                else
+                {
+                    currentKeyChain = currentLine.Split(' ');
+                    foreach (string currentEvaluation in currentKeyChain)
+                    {
+                        currentKey = currentEvaluation.Split(':');
+                        switch (currentKey[0])
+                        {
+                            default:
+                                {
+                                    Console.WriteLine(currentKey[0]);
+                                    Console.WriteLine("unknown input above, hit enter to continue");
+                                    Console.Read();
+                                    break;
+                                }
+                            case "byr":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}",currentKey[0], currentKey[1]);
+                                    byr = true;
+                                    break;
+                                }
+                            case "iyr":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    iyr = true;
+                                    break;
+                                }
+                            case "eyr":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    eyr = true;
+                                    break;
+                                }
+                            case "hgt":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    hgt = true;
+                                    break;
+                                }
+                            case "hcl":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    hcl = true;
+                                    break;
+                                }
+                            case "ecl":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    ecl = true;
+                                    break;
+                                }
+                            case "pid":
+                                {
+                                    Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]);
+                                    pid = true;
+                                    break;
+                                }
+                            case "cid": Console.WriteLine("Key: {0}, Value: {1}", currentKey[0], currentKey[1]); break;
+                                //    {
+                                //        cid = true;
+                                //        break;
+                                //    }
+                        }
+
+                    }
+
+
+
+                }
+
+                itterator += 1;
+                //Console.WriteLine(currentLine);
+            }
+
+            Console.WriteLine("the total number of passports is: {0}, The total Valid ones are: {1}, of which: {2} is cheated.  and {3} failed.", passportNumber, validPassport, validCheatedPassport, invalidPassport);
+
+        }
+
+    }
+
+}
