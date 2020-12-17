@@ -10,7 +10,7 @@ namespace _5D1P
     {
         static void Main(string[] _0)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\5D1P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = File.ReadAllLines(inputPath).ToList();
             int charPosition = 0;
             int currentIndexofList = 0;
@@ -125,7 +125,7 @@ namespace _5D1P
             }
             myID = myRow * 8 + myColumn;
             Console.WriteLine("My seat is at Row: {0}, Column: {1}, ID: {2}", myRow, myColumn, myID);
-            
+
 
         }
 

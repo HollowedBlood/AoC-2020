@@ -10,7 +10,7 @@ namespace _3D2P
     {
         static void Main(string[] _0)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\3D2P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = File.ReadAllLines(inputPath).ToList();
             char toboggan = 'T';
             char collide = 'C';
@@ -69,7 +69,7 @@ namespace _3D2P
             {
                 finalAnswer = finalAnswer * value;
             }
-            
+
             Console.WriteLine("The Product is: {0}", finalAnswer);
         }
     }
