@@ -10,7 +10,7 @@ namespace _1D1P
     {
         static void Main(string[] _args)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\3D1P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = File.ReadAllLines(inputPath).ToList();
             char toboggan = 'T';
             char collide = 'C';

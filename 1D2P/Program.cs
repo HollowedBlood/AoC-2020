@@ -9,7 +9,7 @@ namespace _1D1P
     {
         static void Main(string[] args)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\1D2P\input.txt";
+            string inputPath = "../../input.txt";
             //string[] inputArray = File.ReadAllLines(inputPath);
             List<string> inputList = new List<string>();
             inputList = File.ReadAllLines(inputPath).ToList();

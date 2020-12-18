@@ -9,7 +9,7 @@ namespace _1D1P
     {
         static void Main(string[] args)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\1D1P\input.txt";
+            string inputPath = "../../input.txt";
             //string[] inputArray = File.ReadAllLines(inputPath);
             List<string> inputList = new List<string>();
             inputList = File.ReadAllLines(inputPath).ToList();
@@ -27,7 +27,7 @@ namespace _1D1P
                         oneDonePAnswer = string.Format("Line: {0}, Value: {1}, and Line: {2}, Value: {3}.  Final Answer: {4}.", itterationOne, cOne, itterationTwo, cTwo, cOne*cTwo);
                         Console.WriteLine(oneDonePAnswer);
                     }
-                    
+
 
                     itterationTwo += 1;
                 }

@@ -10,7 +10,7 @@ namespace _4D1P
     {
         static void Main(string[] _0)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\4D1P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = File.ReadAllLines(inputPath).ToList();
             int passportNumber = 1; // first passport
             int validPassport = 0;
@@ -28,12 +28,12 @@ namespace _4D1P
             {
                 if (currentLine == "")
                 {
-                    
+
                     Console.WriteLine("passport #{0}, Known fields: {1}", passportNumber, knownFields);
                     if (knownFields == 8 || knownFields == 7 & !cid)
                     {
                         valid = true;
-                    } 
+                    }
                     if (valid)
                     {
                         validPassport += 1;
@@ -61,7 +61,7 @@ namespace _4D1P
                         {
                             cid = true;
                         }
-                        
+
                     }
 
                     Console.WriteLine("passport #{0}, Known fields: {1}", passportNumber, knownFields);

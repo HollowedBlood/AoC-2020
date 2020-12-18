@@ -10,7 +10,7 @@ namespace _4D2P
     {
         static void Main(string[] _0)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\4D1P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = File.ReadAllLines(inputPath).ToList();
             int passportNumber = 0;
             int validPassport = 0;
@@ -129,7 +129,7 @@ namespace _4D2P
                 }
                 Console.WriteLine("the total number of passports is: {0}, The total Valid ones are: {1} and {2} failed.", passportNumber, validPassport, invalidPassport);
             }
-    
+
 
 
 
@@ -224,7 +224,7 @@ namespace _4D2P
                                         case 'e': hclTmpCounter += 1; break;
                                         case 'f': hclTmpCounter += 1; break;
                                     }
-                                
+
                                 }
                                 if (hclTmpCounter == 6)
                                 {

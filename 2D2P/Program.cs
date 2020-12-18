@@ -9,15 +9,15 @@ namespace _1D1P
     {
         static void Main(string[] args)
         {
-            string inputPath = @"E:\Libraries\Documents\GitHub\AoC-2020\2D1P\input.txt";
+            string inputPath = "../../input.txt";
             List<string> inputList = new List<string>();
             inputList = File.ReadAllLines(inputPath).ToList();
             int currentLine = 1; //just tracking what line the answers are on for final result
             int totalValidPasswords = 0; //final answer variable
-            int totalFailedPasswords = 0; //final curiosity variable 
+            int totalFailedPasswords = 0; //final curiosity variable
             int substringEndOfNu; //index where the last number for the rule is used
             int substringEndOfCh; //index where the required character is defined
-            int[] ruleLocations; //integerarray used for calculations regarding if a string has the correct number of 
+            int[] ruleLocations; //integerarray used for calculations regarding if a string has the correct number of
             char requiredChar; //character required in the input password
             string inputPassword; //the substring of the input line that only contains a password
 
